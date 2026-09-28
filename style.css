@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap');
+
+/* ==============================
+VARIABLES
+================================= */
+
+:root {
+--bleu: #1746c7;
+--bleu-fonce: #0d2d80;
+--bleu-clair: #edf3ff;
+
+--blanc: #ffffff;
+--gris: #f7f8fa;
+--gris-border: #dfe4ec;
+--texte: #101828;
+--texte-secondaire: #667085;
+}
+
+/* ==============================
+RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Inter", sans-serif;
+background: var(--blanc);
+color: var(--texte);
+line-height: 1.6;
+}
+
+/* ==============================
+HEADER
+================================= */
+
+.hero {
+min-height: 75vh;
+display: flex;
+align-items: center;
+
+padding: 80px 8%;
+
+background: var(--blanc);
+
+border-bottom: 1px solid var(--gris-border);
+}
+
+.hero-content {
+max-width: 900px;
+}
+
+.surtitle {
+font-size: 0.8rem;
+font-weight: 600;
+letter-spacing: 3px;
+color: var(--bleu);
+margin-bottom: 25px;
+}
+
+.hero h1 {
+font-family: "Montserrat", sans-serif;
+font-size: clamp(3.5rem, 8vw, 7rem);
+line-height: 0.95;
+font-weight: 800;
+letter-spacing: -4px;
+margin-bottom: 35px;
+}
+
+.hero h1 span {
+color: var(--bleu);
+font-weight: 500;
+}
+
+.intro {
+max-width: 600px;
+font-size: 1.05rem;
+font-weight: 300;
+color: var(--texte-secondaire);
+}
+
+/* ==============================
+MAIN
+================================= */
+
+main {
+max-width: 1200px;
+margin: auto;
+padding: 80px 30px;
+}
+
+/* ==============================
+SECTIONS
+================================= */
+
+.section {
+margin-bottom: 100px;
+
+border: 1px solid var(--gris-border);
+padding: 45px;
+
+background: var(--blanc);
+}
+
+.section-heading {
+display: flex;
+align-items: flex-start;
+gap: 20px;
+
+margin-bottom: 45px;
+}
+
+.section-number {
+color: var(--bleu);
+font-family: "Montserrat", sans-serif;
+font-size: 0.85rem;
+font-weight: 700;
+
+padding-top: 6px;
+}
+
+.section-label {
+color: var(--bleu);
+font-size: 0.7rem;
+letter-spacing: 2px;
+font-weight: 600;
+
+margin-bottom: 5px;
+}
+
+.section h2 {
+font-family: "Montserrat", sans-serif;
+font-size: 2rem;
+font-weight: 700;
+}
+
+/* ==============================
+STAGE
+================================= */
+
+.stage-infos {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+border-top: 1px solid var(--gris-border);
+border-left: 1px solid var(--gris-border);
+}
+
+.info-item {
+min-height: 120px;
+
+padding: 25px;
+
+border-right: 1px solid var(--gris-border);
+border-bottom: 1px solid var(--gris-border);
+
+transition: 0.3s ease;
+}
+
+.info-item:hover {
+background: var(--bleu-clair);
+}
+
+.info-item span {
+display: block;
+
+color: var(--texte-secondaire);
+
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+
+margin-bottom: 8px;
+}
+
+.info-item strong {
+display: block;
+
+font-family: "Montserrat", sans-serif;
+font-size: 0.95rem;
+font-weight: 600;
+}
+
+/* ==============================
+MISSIONS
+================================= */
+
+.missions-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+  align-items: start;
+}
+
+.mission-card {
+border: 1px solid var(--gris-border);
+
+padding: 30px;
+
+position: relative;
+
+transition:
+transform 0.3s ease,
+border-color 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+transform: translateY(-6px);
+
+border-color: var(--bleu);
+
+box-shadow: 0 15px 35px rgba(23, 70, 199, 0.08);
+}
+
+.mission-type {
+display: inline-block;
+
+color: var(--bleu);
+
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+
+margin-bottom: 15px;
+}
+
+.mission-card h3 {
+font-family: "Montserrat", sans-serif;
+
+font-size: 1.2rem;
+margin-bottom: 12px;
+}
+
+.mission-card > p {
+color: var(--texte-secondaire);
+font-size: 0.9rem;
+font-weight: 300;
+
+margin-bottom: 25px;
+}
+
+/* COMPETENCES / OUTILS */
+
+.mission-details {
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+gap: 15px;
+
+margin-top: 20px;
+}
+
+.detail-box {
+border-top: 1px solid var(--gris-border);
+
+padding-top: 15px;
+}
+
+.detail-box h4 {
+color: var(--bleu);
+
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+
+margin-bottom: 10px;
+}
+
+.detail-box ul {
+list-style: none;
+}
+
+.detail-box li {
+font-size: 0.8rem;
+color: var(--texte-secondaire);
+
+margin-bottom: 5px;
+}
+
+.detail-box li::before {
+content: "— ";
+color: var(--bleu);
+}
+
+
+/* ==============================
+OUTILS
+================================= */
+
+.tools-list {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.tool {
+border: 1px solid var(--gris-border);
+
+padding: 12px 18px;
+
+font-size: 0.85rem;
+
+transition: 0.3s ease;
+}
+
+.tool:hover {
+color: var(--blanc);
+background: var(--bleu);
+border-color: var(--bleu);
+
+transform: translateY(-3px);
+}
+
+/* ==============================
+BILAN
+================================= */
+
+.bilan-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+gap: 20px;
+}
+
+.bilan-card {
+padding: 30px;
+
+background: var(--gris);
+
+border: 1px solid var(--gris-border);
+}
+
+.bilan-card > span {
+color: var(--bleu);
+
+font-family: "Montserrat", sans-serif;
+
+font-weight: 700;
+
+font-size: 0.8rem;
+}
+
+.bilan-card h3 {
+font-family: "Montserrat", sans-serif;
+
+font-size: 1.1rem;
+
+margin: 15px 0 10px;
+}
+
+.bilan-card p {
+color: var(--texte-secondaire);
+
+font-weight: 300;
+}
+
+/* ==============================
+FOOTER
+================================= */
+
+footer {
+padding: 35px 8%;
+
+border-top: 1px solid var(--gris-border);
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+font-size: 0.75rem;
+
+color: var(--texte-secondaire);
+}
+
+footer p {
+font-family: "Montserrat", sans-serif;
+
+font-weight: 700;
+
+color: var(--texte);
+}
+
+/* ==============================
+ANIMATIONS
+================================= */
+
+.reveal {
+opacity: 1;
+transform: none;
+}
+
+/* ==============================
+RESPONSIVE
+================================= */
+
+@media (max-width: 800px) {
+
+.hero {
+min-height: 65vh;
+padding: 60px 25px;
+}
+
+.hero h1 {
+font-size: 3.5rem;
+letter-spacing: -2px;
+}
+
+main {
+padding: 50px 15px;
+}
+
+.section {
+padding: 25px;
+margin-bottom: 60px;
+}
+
+.stage-infos {
+grid-template-columns: 1fr 1fr;
+}
+
+.missions-grid {
+grid-template-columns: 1fr;
+}
+
+.bilan-grid {
+grid-template-columns: 1fr;
+}
+
+footer {
+flex-direction: column;
+gap: 10px;
+align-items: flex-start;
+}
+}
+
+@media (max-width: 500px) {
+
+.hero h1 {
+font-size: 2.7rem;
+}
+
+.stage-infos {
+grid-template-columns: 1fr;
+}
+
+.mission-details {
+grid-template-columns: 1fr;
+}
+
+.section-heading {
+gap: 12px;
+}
+
+.section h2 {
+font-size: 1.5rem;
+}
+}/* Carte avec image : image à gauche, verticale */
+.mission-card.has-image {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+}
+
+.mission-image {
+  flex: 0 0 160px;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--gris-border);
+  border-radius: 10px;
+  background: var(--gris);
+  overflow: hidden;
+}
+
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.mission-image img:hover {
+  transform: scale(1.02);
+}
+.horizontal-image .mission-image {
+  flex: 0 0 220px;
+  aspect-ratio: 4 / 3;
+}
+
+.horizontal-image .mission-image img {
+  object-fit: contain;
+  transform: none;
+}
+.mission-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .mission-image {
+    flex: 0 0 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mission-image {
+    flex: 0 0 100px;
+  }
+}
